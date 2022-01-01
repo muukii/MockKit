@@ -6,16 +6,18 @@ extension UIView {
   public static func mock(backgroundColor: UIColor) -> UIView {
     let view = UIView()
     view.backgroundColor = backgroundColor
-    view.layer.borderWidth = 3
+    view.layer.borderWidth = 6
     view.layer.borderColor = UIColor(white: 0, alpha: 0.2).cgColor
+    view.layer.masksToBounds = true
     return view
   }
 
   public static func mock(backgroundColor: UIColor, preferredSize: CGSize) -> UIView {
     let view = IntrinsicSizeView(preferredSize: preferredSize)
     view.backgroundColor = backgroundColor
-    view.layer.borderWidth = 3
+    view.layer.borderWidth = 6
     view.layer.borderColor = UIColor(white: 0, alpha: 0.2).cgColor
+    view.layer.masksToBounds = true
     return view
   }
 }
